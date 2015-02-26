@@ -55,6 +55,10 @@
             .attr("x",function(d,i){return i*20;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
             .attr("fill","white");
+        var yAxis=d3.svg.axis()
+            .scale(yScale)
+            .orient("left");
+            
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
                 .attr("height",height)
