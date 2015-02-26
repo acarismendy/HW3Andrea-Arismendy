@@ -26,7 +26,7 @@
    <script type="text/javascript">
      d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=300;
-        var width=500;
+        var width=970;
         var svg=d3.select("body").append("svg")
                 .attr("height",height)
                 .attr("width",width)
@@ -36,13 +36,13 @@
             .enter()
             .append("rect")
             .attr("x",function(d,i){
-              return i*10;
+              return i*21;
               })
             .attr("height",function(d){
               return d.Mathematics;
               })
             .attr("fill","black")
-            .attr("width",9)
+            .attr("width",20)
             .attr("y",function(d){
               return height-d.Mathematics;
             });
