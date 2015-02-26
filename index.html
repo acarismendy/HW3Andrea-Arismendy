@@ -36,15 +36,15 @@
             .enter()
             .append("rect")
             .attr("x",function(d,i){
-              return i*20;
+              return i*16;
               })
             .attr("height",function(d){
               return d.Mathematics*5;
               })
             .attr("fill","black")
-            .attr("width",19)
+            .attr("width",15)
             .attr("y",function(d){
-              return height-d.Mathematics;
+              return height-d.Mathematics*5;
             });
             //for(var i=0;i<49;i++){
               //console.log(data.Mathematics);
