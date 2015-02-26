@@ -86,7 +86,8 @@
             var svg1=d3.select("#scatter").append("svg")
                 .attr("height",height)
                 .attr("width",width)
-                .style("background","#d3ffce");
+                .style("background","#d3ffce")
+                .attr("border",10);
         svg1.selectAll("rect")
             .data(data)
             .enter()
