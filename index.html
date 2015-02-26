@@ -28,7 +28,7 @@
         var height=300;
         var width=935;
         //GRAPH 1
-        var svg=d3.select("body").append("svg")
+    var svg=d3.select("body").append("svg")
                 .attr("height",height)
                 .attr("width",width)
                 .style("background","#d3ffce");
@@ -47,7 +47,7 @@
             .attr("y",function(d){
               return height-d.Mathematics*5;
             });
-            svg.selectAll("text")
+        svg.selectAll("text")
             .data(data)
             .enter()
             .append("text")
@@ -55,7 +55,9 @@
             .attr("x",function(d,i){return i*20;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
             .attr("fill","white");
-        var yAxis=d3.svg.axis()
+    var yScale=d3.scale.linear();
+        yScale.range([0,100]);
+    var yAxis=d3.svg.axis()
             .scale(yScale)
             .orient("left");
             
