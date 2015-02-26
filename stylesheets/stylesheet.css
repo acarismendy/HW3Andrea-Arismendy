@@ -1,6 +1,6 @@
 .axis path, .axis line{
   fill:none;
-  stroke:black;
+  stroke:red;
 }
 .axis text{
   font-family:sans-serif;
