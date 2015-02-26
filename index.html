@@ -67,6 +67,15 @@
             .attr("class","axis")
             .call(yAxis);
             
+       var xScale=d3.scale.ordinal();
+           xScale.domain(d.Country);
+    var xAxis=d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .ticks(10);
+        svg.append("g")
+            .attr("class","axis")
+            .call(yxxis);      
             
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
