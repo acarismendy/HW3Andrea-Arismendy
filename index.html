@@ -47,7 +47,7 @@
             .attr("fill","black")
             .attr("width",18)
             .attr("y",function(d){
-              return height-d.Mathematics*5;
+              return height-d.Mathematics*5+padding;
             });
         svg.selectAll("text")
             .data(data)
@@ -81,7 +81,7 @@ xScale.domain(["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O",
             .ticks(10);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate(0,"+height+")")
+            .attr("transform","translate(0,"+height+padding+")")
             .call(xAxis);      
             
             //GRAPH 2
