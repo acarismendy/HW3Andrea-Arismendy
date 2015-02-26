@@ -42,7 +42,10 @@
               return d.Mathematics*10;
               })
             .attr("fill","black")
-            .attr("width",10);
+            .attr("width",width/48)
+            .attr("y",function(d){
+              return height-d;
+            });
             for(var i=0;i<49;i++){
               console.log(data.Mathematics);
             }
