@@ -47,6 +47,12 @@
             .attr("y",function(d){
               return height-d.Mathematics*5;
             });
+            svg.selectAll("text")
+            .enter()
+            .append("text")
+            .text(function(d){return d;})
+            .attr("x",function(d,i){return i*19;})
+            .attr("y",function(d){height-d.Mathematics*5;})
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
                 .attr("height",height)
