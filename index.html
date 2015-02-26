@@ -61,6 +61,7 @@
             .scale(yScale)
             .orient("left");
         svg.append("g")
+            .attr("class","axis")
             .call(yAxis);
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
