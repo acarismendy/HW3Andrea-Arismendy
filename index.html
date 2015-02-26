@@ -53,7 +53,7 @@
             .data(data)
             .enter()
             .append("text")
-            .text(function(d){return d.Country;})
+            .text(function(d){return d.Mathematics;})
             .attr("x",function(d,i){return i*19+padding;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
             .attr("fill","white")
