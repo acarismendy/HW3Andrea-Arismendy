@@ -24,13 +24,13 @@
       </table>
     </div>
    <script type="text/javascript">
-     d3.csv("Percent of total instrucional hours by subject and country.csv",function(data){
+     d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=300;
         var width=500;
         var svg=d3.select("#scatter").append("svg")
                 .attr("height",height)
                 .attr("width",width)
-                .style("background-color",#d3ffce);
+                .style("background",#d3ffce);
         svg.selectall("rect")
             .data(data)
             .enter()
