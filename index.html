@@ -68,7 +68,7 @@
             .call(yAxis);
             
        var xScale=d3.scale.ordinal();
-           xScale.domain(d.Country);
+           xScale.domain(function(d){return d.Country;});
     var xAxis=d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
