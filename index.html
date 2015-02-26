@@ -27,6 +27,7 @@
      d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=300;
         var width=970;
+        var padding=15;
         //GRAPH 1
     var svg=d3.select("#scatter").append("svg")
                 .attr("height",height)
@@ -38,7 +39,7 @@
             .enter()
             .append("rect")
             .attr("x",function(d,i){
-              return i*19;
+              return i*19+padding;
               })
             .attr("height",function(d){
               return d.Mathematics*5;
@@ -53,7 +54,7 @@
             .enter()
             .append("text")
             .text(function(d){return d.Mathematics;})
-            .attr("x",function(d,i){return i*20;})
+            .attr("x",function(d,i){return i*19+padding;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
             .attr("fill","white");
             
@@ -66,7 +67,7 @@
               .ticks(10);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate("+5+",0)")
+            .attr("transform","translate("+padding+",0)")
             .call(yAxis);
             
        //var xScale=d3.scale.ordinal();
