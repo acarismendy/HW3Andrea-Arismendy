@@ -28,7 +28,6 @@
         var height=300;
         var width=970;
         var padding=35;
-        var rotate = d3.svg.transform("rotate(-90)");
         //GRAPH 1
     var svg=d3.select("#scatter").append("svg")
                 .attr("height",height)
@@ -58,7 +57,7 @@
             .attr("x",function(d,i){return i*19+padding;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
             .attr("fill","white")
-            .attr("transform",rotate);
+            .attr("transform","rotate(90)");
             
     var yScale=d3.scale.linear();
         yScale.domain([0,100])
