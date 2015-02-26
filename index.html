@@ -31,6 +31,7 @@
     var svg=d3.select("body").append("svg")
                 .attr("height",height)
                 .attr("width",width)
+                .attr("class","graph")
                 .style("background","#d3ffce");
         svg.selectAll("rect")
             .data(data)
