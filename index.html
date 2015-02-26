@@ -72,7 +72,6 @@
             .call(yAxis);
             
        var xScale=d3.scale.ordinal();
-xScale.domain(["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","AB","AC","AD","AE","AF","AG","AI","AJ","AH","AK","AL","AM","AN","AÑ","AO","AP","AQ","AR","AS","AT","AU"])
           .range([padding,965]);
           
           
@@ -83,7 +82,6 @@ xScale.domain(["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O",
         svg.append("g")
             .attr("class","axis")
             .attr("transform","translate(0,"+(height-padding+5)+")")
-            .attr("transform","rotate(90)")
             .call(xAxis);      
             
             //GRAPH 2
