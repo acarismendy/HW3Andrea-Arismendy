@@ -7,13 +7,45 @@
     <meta name="description" content="Hw3andrea-arismendy : ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script type="text/javascript" src="d3.js"></script>
     <title>Hw3andrea-arismendy</title>
   </head>
 
   <body>
-
-   
+    <div>
+      <h1><b>Percentage time dedicated to math and science by country</b></h1>
+    </div>
+    <div id="scatter">
+     
+    </div>
+    <div>
+      <table>
+        
+      </table>
+    </div>
+   <script type="text/javascript">
+     d3.csv("Percent of total instrucional hours by subject and country.csv",function(data){
+        var height=300;
+        var width=500;
+        var svg=d3.select("body").append("svg")
+                .attr("height",height)
+                .attr("width",width);
+        var circle=svg.selectall("rect")
+                    .data(data)
+                    .enter()
+                    .append("rect")
+                    .attr("x",function(d,i){
+                      return i*(width/data.length);
+                    })
+                    .attr("height",function(d){
+                      return d*100;
+                    })
+                    .attr("y",function(d){
+                      return height-y;
+                    });
+     })
+    
+   </script>
 
   </body>
 </html>
