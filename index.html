@@ -53,7 +53,7 @@
             .append("text")
             .text(function(d){return d.Mathematics;})
             .attr("x",function(d,i){return i*19;})
-            .attr("y",function(d){return height-d.Mathematics*5;})
+            .attr("y",function(d){return height-d.Mathematics*5+7;})
             .attr("fill","white");
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
@@ -81,7 +81,7 @@
             .append("text")
             .text(function(d){return d.Science;})
             .attr("x",function(d,i){return i*19;})
-            .attr("y",function(d){return height-d.Science*5;})
+            .attr("y",function(d){return height-d.Science*5+7;})
             .attr("fill","white");
             //for(var i=0;i<49;i++){
               //console.log(data.Mathematics);
