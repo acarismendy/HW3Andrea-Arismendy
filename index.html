@@ -60,7 +60,8 @@
         yScale.range([0,100]);
     var yAxis=d3.svg.axis()
             .scale(yScale)
-            .orient("left");
+            .orient("left")
+            .ticks(10);
         svg.append("g")
             .attr("class","axis")
             .call(yAxis);
