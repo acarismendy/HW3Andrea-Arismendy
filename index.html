@@ -27,7 +27,7 @@
      d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=300;
         var width=970;
-        var padding=25;
+        var padding=35;
         //GRAPH 1
     var svg=d3.select("#scatter").append("svg")
                 .attr("height",height)
@@ -60,7 +60,7 @@
             
     var yScale=d3.scale.linear();
         yScale.domain([0,100])
-              .range([0,935]);
+              .range([0,300]);
     var yAxis=d3.svg.axis()
               .scale(yScale)
               .orient("left")
