@@ -56,31 +56,32 @@
             .attr("x",function(d,i){return i*20;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
             .attr("fill","white");
+            
     var yScale=d3.scale.linear();
         yScale.domain([0,100])
               .range([0,935]);
     var yAxis=d3.svg.axis()
-            .scale(yScale)
-            .orient("left")
-            .ticks(10);
+              .scale(yScale)
+              .orient("left")
+              .ticks(10);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate(0,"+(height-5)+")")
+            //.attr("transform","translate(0,"+(height-5)+")")
             .call(yAxis);
             
-       var xScale=d3.scale.ordinal();
-          xScale.domain(function(d){return d.Country;})
-          .range([0,500]);
-          //["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","AB","AC","AD","AE","AF","AG","AI","AJ","AH","AK","AL","AM","AN","AÑ","AO","AP","AQ","AR","AS","AT","AU"])
-           
-    var xAxis=d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom")
-            .ticks(10);
-        svg.append("g")
-            .attr("class","axis")
-            .attr("transform","translate("+5+",0)")
-            .call(xAxis);      
+       //var xScale=d3.scale.ordinal();
+      //    xScale.domain(function(d){return d.Country;})
+      //    .range([0,500]);
+      //    //["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z","AA","AB","AC","AD","AE","AF","AG","AI","AJ","AH","AK","AL","AM","AN","AÑ","AO","AP","AQ","AR","AS","AT","AU"])
+      //     
+    //var xAxis=d3.svg.axis()
+    //        .scale(xScale)
+    //        .orient("bottom")
+    //        .ticks(10);
+    //    svg.append("g")
+    //        .attr("class","axis")
+    //        .attr("transform","translate("+5+",0)")
+    //        .call(xAxis);      
             
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
