@@ -35,10 +35,10 @@
                     .enter()
                     .append("rect")
                     .attr("x",function(d,i){
-                      return i*(width/Country);
+                      return i*(width/data.length);
                     })
                     .attr("height",function(d){
-                      return d*100;
+                      return d.Mathematics*100;
                     })
                     .attr("y",function(d){
                       return height-y;
