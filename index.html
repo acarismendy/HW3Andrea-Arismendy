@@ -65,6 +65,7 @@
             .ticks(10);
         svg.append("g")
             .attr("class","axis")
+            .attr("transform","translate(0,"+(height-5)+")")
             .call(yAxis);
             
        var xScale=d3.scale.ordinal();
