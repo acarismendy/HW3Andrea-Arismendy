@@ -31,7 +31,7 @@
    <script type="text/javascript">
      d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=300;
-        var width=970;
+        var width=1000;
         var padding=35;
         var labels=new Array();
         
@@ -84,7 +84,7 @@
             
        var xScale= d3.scale.ordinal()
             .domain(labels)
-            .rangePoints([padding, 970]);
+            .rangePoints([padding, 980]);
           
           
     var xAxis=d3.svg.axis()
