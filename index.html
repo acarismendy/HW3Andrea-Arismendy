@@ -84,7 +84,7 @@
             
        var xScale= d3.scale.ordinal()
             .domain(labels)
-            .rangePoints([padding, 1044]);
+            .rangePoints([padding, 1046]);
           
           
     var xAxis=d3.svg.axis()
@@ -94,7 +94,7 @@
             //.innerTickSize(18);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate(1,"+(height-padding)+")")
+            .attr("transform","translate(-1,"+(height-padding)+")")
             .call(xAxis)
             .selectAll("text")
             .attr("y", -10)
