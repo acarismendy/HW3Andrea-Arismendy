@@ -84,7 +84,7 @@
             
        var xScale=d3.scale.ordinal()
           .domain(labels)
-          .range([1,970]);
+          .range([padding,935]);
           
           
     var xAxis=d3.svg.axis()
@@ -93,6 +93,7 @@
         svg.append("g")
             .attr("class","axis")
             .attr("transform","translate(0,"+(height-padding)+")")
+            .attr("transform","rotate(90)")
             .call(xAxis);      
             
             //GRAPH 2
