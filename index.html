@@ -49,12 +49,12 @@
               return i*19+padding;
               })
             .attr("height",function(d){
-              return d.Mathematics*5;
+              return d.Mathematics;
               })
             .attr("fill","black")
             .attr("width",18)
             .attr("y",function(d){
-              return height-d.Mathematics*5-padding;
+              return height-d.Mathematics-padding;
             });
             for(var i=0;i<data.length;i++){
               labels[i]=data[i].Country;
@@ -67,7 +67,7 @@
             .text(function(d){return d.Mathematics;})
             //.attr("transform", "rotate(-90)")
             .attr("x",function(d,i){return i*19+padding;})
-            .attr("y",function(d){return height-d.Mathematics*5+12;})
+            .attr("y",function(d){return height-d.Mathematics+12;})
             .attr("fill","white");
             
     var yScale=d3.scale.linear();
