@@ -30,9 +30,9 @@
     </div>
    <script type="text/javascript">
      d3.csv("PercentOfInstructionalHours.csv",function(data){
-        var height=300;
+        var height=400;
         var width=1000;
-        var padding=35;
+        var padding=60;
         var labels=new Array();
         
         //GRAPH 1
@@ -100,7 +100,7 @@
             .attr("y", -10)
             //.attr("x", 30)
             //.attr("dy", ".35em")
-            .attr("transform", "translate(3,1) rotate(90)")
+            .attr("transform", "translate(3,2) rotate(90)")
             .style("text-anchor", "start")
             .attr("fill","black");
             //.attr("transform",'translate(-5'   + ',-' + 19 + ') rotate(-90)')
