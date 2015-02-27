@@ -89,8 +89,7 @@
           
     var xAxis=d3.svg.axis()
             .scale(xScale)
-            .orient("bottom")
-            .ticks(10);
+            .orient("bottom");
         svg.append("g")
             .attr("class","axis")
             .attr("transform","translate(0,"+(height-padding)+")")
