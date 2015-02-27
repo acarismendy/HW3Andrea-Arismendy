@@ -15,9 +15,14 @@
     <div>
       <h1><b>Percentage time dedicated to math and science by country</b></h1>
     </div>
-    <div id="scatter" style="text-align:center">
+    <div id="graph1" style="text-align:center" transform="rotate(90)">
      
     </div>
+    
+    <div id="graph2" style="text-align:center">
+      
+    </div>
+    
     <div>
       <table>
         
@@ -29,7 +34,7 @@
         var width=970;
         var padding=35;
         //GRAPH 1
-    var svg=d3.select("#scatter").append("svg")
+    var svg=d3.select("#graph1").append("svg")
                 .attr("height",height)
                 .attr("width",width)
                 .attr("class","graph")
