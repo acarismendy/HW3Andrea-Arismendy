@@ -54,7 +54,7 @@
             .attr("fill","black")
             .attr("width",18)
             .attr("y",function(d){
-              return height-d.Mathematics*260/100;
+              return height-d.Mathematics*260/100-padding;
             });
             for(var i=0;i<data.length;i++){
               labels[i]=data[i].Country;
