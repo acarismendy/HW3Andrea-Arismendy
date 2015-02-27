@@ -82,9 +82,9 @@
             .attr("transform","translate("+padding+",-"+(padding-5)+")")
             .call(yAxis);
             
-       var xScale=d3.scale.ordinal()
-          .domain([1,2,3,4,5,6,7,8,9,10])
-          .range([padding,965]);
+       var xScale= d3.scale.ordinal()
+            .domain(["foo", "bar", "baz"])
+            .range(colorbrewer.RdBu[9]);
           
           
     var xAxis=d3.svg.axis()
