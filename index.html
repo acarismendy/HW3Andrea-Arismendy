@@ -84,13 +84,14 @@
             
        var xScale= d3.scale.ordinal()
             .domain(labels)
-            .rangeBands([padding, 970]);
+            .rangePoints([padding, 970]);
           
           
     var xAxis=d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
-            .ticks(48);
+            .ticks(48)
+            .inneTickSize(18);
         svg.append("g")
             .attr("class","axis")
             .attr("transform","translate(0,"+(height-padding)+")")
