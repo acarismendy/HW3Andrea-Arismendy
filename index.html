@@ -15,7 +15,7 @@
     <div>
       <h1><b>Percentage time dedicated to math and science by country</b></h1>
     </div>
-    <div id="graph1" style="text-align:center" transform="rotate(90)">
+    <div id="graph1" style="text-align:center">
      
     </div>
     
@@ -95,8 +95,7 @@
             .attr("transform","translate(0,"+(height-padding)+")")
             .call(xAxis)
             .selectAll("text")
-             .attr("transform","translate(0,20)")
-            .attr("transform", function(d) {
+            .attr("transform", "translate(0,20)"+ function(d) {
               return "rotate(-90)" })
             .style("text-align","right");      
             
