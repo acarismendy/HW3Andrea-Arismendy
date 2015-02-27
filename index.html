@@ -31,7 +31,7 @@
    <script type="text/javascript">
      d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=400;
-        var width=1080;
+        var width=1000;
         var padding=100;
         var labels=new Array();
         
@@ -54,7 +54,7 @@
             .attr("fill","black")
             .attr("width",18)
             .attr("y",function(d){
-              return height-d.Mathematics*260/100-padding;
+              return height-d.Mathematics*250/100-padding;
             });
             for(var i=0;i<data.length;i++){
               labels[i]=data[i].Country;
@@ -84,7 +84,7 @@
             
        var xScale= d3.scale.ordinal()
             .domain(labels)
-            .rangePoints([padding, 985]);
+            .rangePoints([padding, 995]);
           
           
     var xAxis=d3.svg.axis()
