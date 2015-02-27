@@ -65,10 +65,10 @@
             .enter()
             .append("text")
             .text(function(d){return d.Country;})
+            .attr("transform",'rotate(-90)')
             .attr("x",function(d,i){return i*19+padding;})
             .attr("y",function(d){return height-d.Mathematics*5+12;})
-            .attr("fill","white")
-            .attr("transform",'rotate(-90)');
+            .attr("fill","white");
             
     var yScale=d3.scale.linear();
         yScale.domain([0,100])
