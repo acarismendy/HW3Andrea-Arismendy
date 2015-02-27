@@ -82,8 +82,8 @@
             .attr("transform","translate("+padding+",-"+(padding-5)+")")
             .call(yAxis);
             
-       var xScale=d3.scale.ordinal()
-          .domain(labels)
+       var xScale=d3.scale.linear()
+          .domain([0,49])
           .range([padding,965]);
           
           
