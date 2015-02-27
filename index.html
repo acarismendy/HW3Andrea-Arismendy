@@ -72,14 +72,14 @@
             
     var yScale=d3.scale.linear();
         yScale.domain([100,0])
-              .range([padding,395]);
+              .range([padding,350]);
     var yAxis=d3.svg.axis()
               .scale(yScale)
               .orient("left")
               .ticks(5);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate("+padding+",-"+(padding-5)+")")
+            .attr("transform","translate("+padding+",-"+(padding+45)+")")
             .call(yAxis);
             
        var xScale= d3.scale.ordinal()
