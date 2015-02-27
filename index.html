@@ -78,7 +78,7 @@
               .ticks(10);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate("+padding+",-"+(padding-40)+")")
+            .attr("transform","translate("+padding+",-"+(padding-30)+")")
             .call(yAxis);
             
        var xScale= d3.scale.ordinal()
@@ -93,7 +93,7 @@
             //.innerTickSize(18);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate(-5,"+(height-padding)+")")
+            .attr("transform","translate(-2,"+(height-padding)+")")
             .call(xAxis)
             .selectAll("text")
             .attr("y", -10)
