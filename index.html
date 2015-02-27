@@ -90,14 +90,20 @@
     var xAxis=d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
-            .ticks(0);
+            .ticks(10);
         svg.append("g")
             .attr("class","axis")
             .attr("transform","translate(0,"+(height-padding)+")")
             .call(xAxis)
             .selectAll("text")
-            .attr("transform",'translate(-5'   + ',-' + 19 + ') rotate(-90)')
-            .attr("fill","white");      
+            .attr("y", 0)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("transform", "rotate(90)")
+            .style("text-anchor", "start")
+            .attr("fill","white");
+            //.attr("transform",'translate(-5'   + ',-' + 19 + ') rotate(-90)')
+            
             
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
