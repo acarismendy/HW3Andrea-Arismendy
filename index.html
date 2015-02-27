@@ -95,8 +95,8 @@
             .attr("transform","translate(0,"+(height-padding)+")")
             .call(xAxis)
             .selectAll("text")
-            .attr("transform", "translate(0,20)"+ function(d) {
-              return "rotate(-90)" })
+            .attr("transform",  function(d) {
+              return "rotate(-90) translate(0,20)" })
             .style("text-align","right");      
             
             //GRAPH 2
