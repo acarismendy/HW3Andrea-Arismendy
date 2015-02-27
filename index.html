@@ -96,7 +96,9 @@
             .call(xAxis)
             .selectAll("text")
             .attr("transform", function(d) {
-              return "rotate(-90)" });      
+              return "rotate(-90)" })
+            .style("text-align:right")
+            .attr("transform","translate(0,20)");      
             
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
