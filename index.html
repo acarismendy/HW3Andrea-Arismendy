@@ -33,6 +33,8 @@
         var height=300;
         var width=970;
         var padding=35;
+        var lables=new Array();
+        
         //GRAPH 1
     var svg=d3.select("#graph1").append("svg")
                 .attr("height",height)
@@ -54,6 +56,9 @@
             .attr("y",function(d){
               return height-d.Mathematics*5-padding;
             });
+            for(var i=0;i<data.length;i++){
+              labels[i]=data[i].Country;
+            }
         svg.selectAll("text")
             .data(data)
             .enter()
@@ -77,6 +82,7 @@
             .call(yAxis);
             
        var xScale=d3.scale.ordinal()
+          .domain(labels)
           .range([padding,965]);
           
           
