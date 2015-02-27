@@ -93,8 +93,10 @@
         svg.append("g")
             .attr("class","axis")
             .attr("transform","translate(0,"+(height-padding)+")")
-            .attr("transform","rotate(90)")
-            .call(xAxis);      
+            .call(xAxis)
+            .selectAll("text")
+            .attr("transform", function(d) {
+              return "rotate(-90)" ;      
             
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
