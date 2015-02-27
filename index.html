@@ -124,37 +124,89 @@
             .style("fill","black");    
             
             //GRAPH 2
-            var svg1=d3.select("#scatter").append("svg")
+             var svg=d3.select("#graph1").append("svg")
                 .attr("height",height)
                 .attr("width",width)
-                .style("background","#d3ffce")
-                .attr("border",10);
-        svg1.selectAll("rect")
+                .attr("class","graph")
+                .style("background","#d3ffce");
+        svg.selectAll("rect")
             .data(data)
             .enter()
             .append("rect")
             .attr("x",function(d,i){
-              return i*19;
+              return i*19+padding;
               })
             .attr("height",function(d){
-              return d.Science*5;
+              return d.Science*250/100;
               })
             .attr("fill","black")
             .attr("width",18)
             .attr("y",function(d){
-              return height-d.Science*5;
+              return height-d.Science*250/100-padding;
             });
-            svg1.selectAll("text")
+            
+        svg.selectAll("text")
             .data(data)
             .enter()
             .append("text")
             .text(function(d){return d.Science;})
-            .attr("x",function(d,i){return i*20;})
-            .attr("y",function(d){return height-d.Science*5+12;})
+            .attr("x",function(d,i){return i*19+padding;})
+            .attr("y",function(d){return height-d.Science*250/100-padding+12;})
             .attr("fill","white");
-            //for(var i=0;i<49;i++){
-              //console.log(data.Mathematics);
-            //}
+            
+    var yScale=d3.scale.linear();
+        yScale.domain([100,0])
+              .range([padding,350]);
+    var yAxis=d3.svg.axis()
+              .scale(yScale)
+              .orient("left")
+              .ticks(10);
+        svg.append("g")
+            .attr("class","axis")
+            .attr("transform","translate("+padding+",-"+(padding-50)+")")
+            .call(yAxis);
+            
+       var xScale= d3.scale.ordinal()
+            .domain(labels)
+            .rangePoints([padding, 1048]);
+          
+          
+    var xAxis=d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .ticks(48);
+        svg.append("g")
+            .attr("class","axis")
+            .attr("transform","translate(0,"+(height-padding)+")")
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", -10)
+            .attr("transform", "translate(3,2) rotate(90)")
+            .style("text-anchor", "start")
+            .attr("fill","black");
+        
+        svg.append("text")
+            .attr("class","name")
+            .attr("text-anchor","end")
+            .attr("y",35)
+            .attr("x",-50)
+            .attr("transform","rotate(-90)")
+            .text("Percent of total instruction Hours")
+            .style("fill","black");
+        svg.append("text")
+            .attr("class","name")
+            .attr("text-anchor","end")
+            .attr("y",380)
+            .attr("x",200)
+            .text("Country")
+            .style("fill","black");    
+        svg.append("text")
+            .attr("class","title")
+            .attr("text-anchor","end")
+            .attr("y",50)
+            .attr("x",800)
+            .text("Percentage of Indtructional Hours Dedicated to Math per Country")
+            .style("fill","black");    
      })
     
    </script>
