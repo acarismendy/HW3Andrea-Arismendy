@@ -84,7 +84,7 @@
             
        var xScale=d3.scale.ordinal()
           .domain(labels)
-          .range([padding,960]);
+          .range([padding,965]);
           
           
     var xAxis=d3.svg.axis()
@@ -95,7 +95,7 @@
             .attr("transform","translate(0,"+(height-padding)+")")
             .call(xAxis)
             .selectAll("text")
-            .attr("transform",'translate(0'   + ',-' + 19 + ') rotate(-90)')
+            .attr("transform",'translate(-5'   + ',-' + 19 + ') rotate(-90)')
             .attr("fill","white")
             .style("text-align","right");      
             
