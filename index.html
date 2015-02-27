@@ -32,7 +32,7 @@
      d3.csv("PercentOfInstructionalHours.csv",function(data){
         var height=400;
         var width=1080;
-        var padding=102;
+        var padding=100;
         var labels=new Array();
         
         //GRAPH 1
@@ -54,11 +54,10 @@
             .attr("fill","black")
             .attr("width",18)
             .attr("y",function(d){
-              return height-d.Mathematics*250/100-padding;
+              return height-d.Mathematics*250/100-padding+2;
             });
             for(var i=0;i<data.length;i++){
               labels[i]=data[i].Country;
-              console.log(labels[i]);
             }
         //svg.selectAll("text")
         //    .data(data)
@@ -79,12 +78,12 @@
               .ticks(10);
         svg.append("g")
             .attr("class","axis")
-            .attr("transform","translate("+padding+",-"+(padding-45)+")")
+            .attr("transform","translate("+padding+",-"+(padding-43)+")")
             .call(yAxis);
             
        var xScale= d3.scale.ordinal()
             .domain(labels)
-            .rangePoints([padding, 1050]);
+            .rangePoints([padding, 1060]);
           
           
     var xAxis=d3.svg.axis()
