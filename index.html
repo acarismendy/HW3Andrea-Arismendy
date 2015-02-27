@@ -64,8 +64,8 @@
             .enter()
             .append("text")
             .text(function(d){return d.Mathematics;})
-            //.attr("x",function(d,i){return i*19+padding;})
-            //.attr("y",function(d){return height-d.Mathematics*250/100+padding;})
+            .attr("x",function(d,i){return i*19+padding;})
+            .attr("y",function(d){return height-d.Mathematics*250/100-padding;})
             .attr("fill","white");
             
     var yScale=d3.scale.linear();
