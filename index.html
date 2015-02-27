@@ -115,6 +115,13 @@
             .attr("x",200)
             .text("Country")
             .style("fill","black");    
+        svg.append("text")
+            .attr("class","name")
+            .attr("text-anchor","end")
+            .attr("y",20)
+            .attr("x",600)
+            .text("Percentage of Indtructional Hours Dedicated to Math per Country")
+            .style("fill","black");    
             
             //GRAPH 2
             var svg1=d3.select("#scatter").append("svg")
