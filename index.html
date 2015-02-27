@@ -96,7 +96,7 @@
             .call(xAxis)
             .selectAll("text")
             .attr("transform",  function(d,i) {
-              return "rotate(-90,"+i*19+padding+","+padding+")" })
+              return "rotate(-90,"+i*19+padding+","+(height-padding)+")" })
             .style("text-align","right");      
             
             //GRAPH 2
